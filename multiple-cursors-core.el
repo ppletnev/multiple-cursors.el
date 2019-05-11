@@ -113,7 +113,7 @@
   "Create overlay to look like cursor at end of line."
   (let ((overlay (make-overlay pos pos nil nil nil)))
     (if (mc/cursor-is-bar)
-	(overlay-put overlay 'before-string (propertize "|" 'face 'mc/cursor-bar-face))
+	(overlay-put overlay 'before-string (propertize "​​" 'face 'mc/cursor-bar-face))
       (overlay-put overlay 'after-string (propertize " " 'face 'mc/cursor-face)))
     overlay))
 
@@ -121,7 +121,7 @@
   "Create overlay to look like cursor inside text."
   (let ((overlay (make-overlay pos (1+ pos) nil nil nil)))
     (if (mc/cursor-is-bar)
-	(overlay-put overlay 'before-string (propertize "|" 'face 'mc/cursor-bar-face))
+	(overlay-put overlay 'before-string (propertize "​​" 'face 'mc/cursor-bar-face))
       (overlay-put overlay 'face 'mc/cursor-face))
     overlay))
 
